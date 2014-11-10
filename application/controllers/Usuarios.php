@@ -46,8 +46,20 @@ class Usuarios extends CI_Controller {
             /* Senão, caso sucesso na validação... */
         } else {
             /* Recebe os dados do formulário (visão) */
+            /**
+             * É criado o array $data com os nomes dos campos
+             * presentes no Banco de dados e então são preenchidos
+             * coms os valores vindo do formulário através dp POST
+             */
             $data['nome'] = $this->input->post('nome');
             $data['email'] = $this->input->post('email');
+            $data['senha'] = $this->input->post('senha');
+            $data['sexo'] = $this->input->post('sexo');
+            $data['endereco'] = $this->input->post('endereco');
+            $data['cidade'] = $this->input->post('cidade');
+            $data['estado'] = $this->input->post('estado');
+            $data['cep'] = $this->input->post('cep');
+            $data['foto'] = $this->input->post('foto');
             
             /**
              * TODO: Deve colocar mais campos!!!
@@ -113,6 +125,13 @@ class Usuarios extends CI_Controller {
             $data['idusuario'] = $this->input->post('idusuario');
             $data['nome'] = ucwords($this->input->post('nome'));
             $data['email'] = strtolower($this->input->post('email'));
+            $data['senha'] = $this->input->post('senha');
+            $data['sexo'] = $this->input->post('sexo');
+            $data['endereco'] = $this->input->post('endereco');
+            $data['cidade'] = $this->input->post('cidade');
+            $data['estado'] = $this->input->post('estado');
+            $data['cep'] = $this->input->post('cep');
+            $data['foto'] = $this->input->post('foto');
 
             /**
              * TODO: Colocar mais campos
